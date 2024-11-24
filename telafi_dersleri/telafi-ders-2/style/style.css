@@ -1,0 +1,57 @@
+/* educations3.style.backgroundColor = "red";
+educations3.style.fontSize = "40px";
+educations3.style.padding = "20px 30px";
+educations3.style.color = "white";
+educations3.style.textTransform = "uppercase"; */
+.educations-3 {
+  background-color: red;
+  font-size: 40px;
+  padding: 20px 30px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.add-div-btn {
+  background-color: green;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+}
+.delete-div-btn {
+  background-color: red;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+}
+
+.container {
+  background-color: gray;
+  height: 500px;
+  width: 500px;
+  margin-top: 40px;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+}
+
+.newDiv {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: white;
+  margin: 20px 0;
+}
+
+.background {
+  background-color: black;
+  color: white;
+}
