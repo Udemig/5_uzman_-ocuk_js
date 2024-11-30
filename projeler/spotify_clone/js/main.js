@@ -1,5 +1,5 @@
 import { getPopular, searchMusic } from "./api.js";
-import { elements, renderCard, renderLoader } from "./ui.js";
+import { elements, renderCard, renderLoader, renderPlayer } from "./ui.js";
 
 // Sayfanın yüklendiği anı izleyip ilgili verileri alan fonksiyon
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("Üzgünüz bir hata oluştu");
     });
 });
-
+// Form gönderildiğinde inputtaki değere erişip api'dan ilgili şarkı verisini alarak ekrana kart render et
 elements.form.addEventListener("submit", async (e) => {
   // Form gönderildiğinde sayfanın yenilenmesini engelle
   e.preventDefault();
@@ -35,4 +35,18 @@ elements.form.addEventListener("submit", async (e) => {
       console.log(error);
       alert("Üzgünüz bir hata oluştu");
     });
+});
+
+// Şarkı listesindeki elemanlara tıklanma olayını izle ve ilgili şarkıyı render et
+
+elements.list.addEventListener("click", (e) => {
+  // Eğer play butonuna tıklanırsa şarkı oynatma özelliğini aktif et
+  if (e.target.className === "play") {
+    // Tıklanılan play butonunun kapsam elemanı olan card a eriş
+    const card = e.target.parentElement.parentElement;
+    // Card elemanının sahip olduğu verileri bir değişkene aktar
+    const data = card.dataset;
+    // Card içerisinden erişilen datayla şarkı oynatma alanını render et
+    renderPlayer(data);
+  }
 });

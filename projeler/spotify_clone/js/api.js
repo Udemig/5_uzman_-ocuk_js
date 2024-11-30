@@ -2,7 +2,7 @@ const url = "https://shazam.p.rapidapi.com/search?term=ceza&locale=tr";
 const options = {
   method: "GET",
   headers: {
-    "x-rapidapi-key": "e52e3bfef4msh2b3dc66d0cfb4a8p16624ejsn1c91d9af0240",
+    "x-rapidapi-key": "d8b7d9a6c9msh95b988adf85f44fp1721b2jsn54008d431a03",
     "x-rapidapi-host": "shazam.p.rapidapi.com",
   },
 };
